@@ -2799,10 +2799,11 @@ body.is-ie .wrapper.fullscreen {
     text-align: left;
   }
   #header .title {
-    font-size: 1.25em;
+    font-size: 1.55em;
     padding: 1em 0;
   }
   #header > nav {
+    display:none;
     border-top: solid 1px rgba(255, 255, 255, 0.15);
     text-align: inherit;
   }
