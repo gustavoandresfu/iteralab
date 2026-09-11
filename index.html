@@ -199,7 +199,7 @@ alineadas con los desafíos del futuro digital de las organizaciones.</p>
 						<div class="split style1">
 							<section>
 								<form id="contactForm">
-									<input type="hidden" name="_subject" value="Nuevo contacto desde Itera-lab web" />
+									<input type="hidden" name="_subject" value="Nuevo contacto desde iteralab web" />
 									<input type="hidden" name="_captcha" value="false" />
 									<input type="hidden" name="_template" value="table" />
 
@@ -234,7 +234,10 @@ alineadas con los desafíos del futuro digital de las organizaciones.</p>
 										btn.innerText = 'Enviando...';
 										responseDiv.style.display = 'none';
 
-										fetch('https://formsubmit.co/ajax/gustavo@iteralab.com.ar', {
+										// Email ofuscado en Base64 para prevenir scraping de spiders de spam (gustavo@iteralab.com.ar)
+										var target = atob('Z3VzdGF2b0BpdGVyYWxhYi5jb20uYXI=');
+
+										fetch('https://formsubmit.co/ajax/' + target, {
 											method: 'POST',
 											headers: {
 												'Content-Type': 'application/json',
@@ -244,7 +247,7 @@ alineadas con los desafíos del futuro digital de las organizaciones.</p>
 												name: form.name.value,
 												email: form.email.value,
 												message: form.message.value,
-												_subject: 'Nuevo contacto desde Itera-lab web'
+												_subject: 'Nuevo contacto desde iteralab web'
 											})
 										})
 										.then(response => response.json())
