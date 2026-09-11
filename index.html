@@ -198,12 +198,10 @@ alineadas con los desafíos del futuro digital de las organizaciones.</p>
 						<p>Escribinos y nos pondremos en contacto para evaluar tu proyecto y cómo podemos ayudarte a modernizar e integrar tus sistemas.</p>
 						<div class="split style1">
 							<section>
-								<form action="https://formsubmit.co/gustavo@iteralab.com.ar" method="POST">
-									<!-- Campos ocultos de configuración FormSubmit -->
+								<form id="contactForm">
 									<input type="hidden" name="_subject" value="Nuevo contacto desde Itera-lab web" />
 									<input type="hidden" name="_captcha" value="false" />
 									<input type="hidden" name="_template" value="table" />
-									<input type="hidden" name="_next" value="https://www.iteralab.com.ar" />
 
 									<div class="fields">
 										<div class="field half">
@@ -220,9 +218,53 @@ alineadas con los desafíos del futuro digital de las organizaciones.</p>
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Enviar Consulta" class="button primary" /></li>
+										<li><button type="submit" id="btnSubmit" class="button primary">Enviar Consulta</button></li>
 									</ul>
+									<div id="formResponse" style="display:none; margin-top: 1em; padding: 1em; border-radius: 6px; background: rgba(255,255,255,0.1); font-weight: 500;"></div>
 								</form>
+
+								<script>
+									document.getElementById('contactForm').addEventListener('submit', function(e) {
+										e.preventDefault();
+										var form = this;
+										var btn = document.getElementById('btnSubmit');
+										var responseDiv = document.getElementById('formResponse');
+										
+										btn.disabled = true;
+										btn.innerText = 'Enviando...';
+										responseDiv.style.display = 'none';
+
+										fetch('https://formsubmit.co/ajax/gustavo@iteralab.com.ar', {
+											method: 'POST',
+											headers: {
+												'Content-Type': 'application/json',
+												'Accept': 'application/json'
+											},
+											body: JSON.stringify({
+												name: form.name.value,
+												email: form.email.value,
+												message: form.message.value,
+												_subject: 'Nuevo contacto desde Itera-lab web'
+											})
+										})
+										.then(response => response.json())
+										.then(data => {
+											btn.disabled = false;
+											btn.innerText = 'Enviar Consulta';
+											responseDiv.style.display = 'block';
+											responseDiv.style.color = '#4caf50';
+											responseDiv.innerText = '¡Gracias! Tu mensaje ha sido enviado con éxito. Te responderemos a la brevedad.';
+											form.reset();
+										})
+										.catch(error => {
+											btn.disabled = false;
+											btn.innerText = 'Enviar Consulta';
+											responseDiv.style.display = 'block';
+											responseDiv.style.color = '#ff5252';
+											responseDiv.innerText = 'Hubo un inconveniente al enviar el mensaje. Por favor, intenta de nuevo.';
+										});
+									});
+								</script>
 							</section>
 						</div>
 					</div>
