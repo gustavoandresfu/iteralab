@@ -92,7 +92,7 @@ html {
 }
 
 body {
-  background: #04212c;
+  background: #0b131f;
 }
 body.is-preload *, body.is-preload *:before, body.is-preload *:after {
   -moz-animation: none !important;
@@ -1583,16 +1583,20 @@ button:hover:active:after,
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  border-radius: 0.25em;
-  border: solid 1px rgba(255, 255, 255, 0.15);
-  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: solid 1px rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
   margin: 0 0 2em 0;
 }
 .features section {
-  padding: 3.5em 3em 1em 7em;
+  padding: 3.5em 3em 1.5em 7em;
   width: 50%;
-  border-top: solid 1px rgba(255, 255, 255, 0.15);
+  border-top: solid 1px rgba(255, 255, 255, 0.08);
   position: relative;
+  transition: background 0.3s ease;
+}
+.features section:hover {
+  background: rgba(255, 255, 255, 0.03);
 }
 .features section:nth-child(-n+2) {
   border-top-width: 0;
@@ -2634,25 +2638,25 @@ table.alt tfoot {
   }
 }
 .wrapper.alt {
-  background-color: #032a3d;
+  background-color: #0b131f;
 }
 .wrapper.style1 {
-  background-color: #032a3d;
+  background-color: #0b131f;
 }
 .wrapper.style1-alt {
-  background-color: rgb(12, 105, 105);
+  background-color: #0f1c2e;
 }
 .wrapper.style2 {
-  background-color: #264f4f;
+  background-color: #122136;
 }
 .wrapper.style2-alt {
-  background-color: rgb(38, 79, 79);
+  background-color: #162842;
 }
 .wrapper.style3 {
-  background-color: #0c6969;
+  background-color: #0f1c2e;
 }
 .wrapper.style3-alt {
-  background-color: rgb(12, 105, 105);
+  background-color: #122136;
 }
 .wrapper.fullscreen {
   display: -moz-flex;

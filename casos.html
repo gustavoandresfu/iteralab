@@ -2,27 +2,27 @@
 <html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<title>Casos de Éxito & Experiencia de Campo | Itera-lab</title>
+		<title>Casos de Éxito y Experiencia de Campo | IteraLab</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Casos de Éxito de Itera-lab: Personalizaciones en SIU-Guaraní y Toba, middleware de integración REST/SOAP, analítica en SQL Server y trazabilidad con ERPs centrales." />
-		<meta name="keywords" content="casos de exito software, personalizacion SIU Guarani, desarrollo SIU Toba, middleware REST SOAP, dashboards SQL Server, integracion ERP, Green IT, observabilidad de datos" />
-		<meta name="author" content="Itera-lab" />
+		<meta name="description" content="Casos de Éxito de IteraLab: Proyectos reales de migración de sistemas legacy, personalizaciones SIU-Guaraní y Toba, middleware REST/SOAP y analítica operativa." />
+		<meta name="keywords" content="casos de exito software, sistemas legacy, migración academica, personalizacion SIU Guarani, desarrollo SIU Toba, middleware REST SOAP, dashboards SQL Server" />
+		<meta name="author" content="IteraLab" />
 		<meta name="robots" content="index, follow" />
 
 		<!-- Open Graph / Meta de Redes Sociales -->
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Casos de Éxito | Itera-lab" />
-		<meta property="og:description" content="Descubre nuestros proyectos y casos aplicados de modernización, integración multisistema y analítica de datos empresarial." />
+		<meta property="og:title" content="Casos de Éxito | IteraLab" />
+		<meta property="og:description" content="Conocé nuestros proyectos de modernización de sistemas legacy, integraciones complejas y migración controlada de datos." />
 		<meta property="og:url" content="https://itera-lab.com/casos.html" />
-		<meta property="og:site_name" content="Itera-lab" />
+		<meta property="og:site_name" content="IteraLab" />
 
 		<!-- JSON-LD Datos Estructurados para SEO y Motores de IA (GEO) -->
 		<script type="application/ld+json">
 		{
 		  "@context": "https://schema.org",
 		  "@type": "ItemPage",
-		  "name": "Casos de Éxito de Itera-lab",
-		  "description": "Portafolio de soluciones e ingeniería de software aplicadas a proyectos de modernización, personalización de SIU-Guaraní/Toba, middleware de integración y analítica de datos.",
+		  "name": "Casos de Éxito de IteraLab",
+		  "description": "Portafolio de ingeniería de software aplicada a proyectos de modernización legacy, personalización de SIU-Guaraní/Toba, middleware de integración y migración masiva de datos.",
 		  "url": "https://itera-lab.com/casos.html",
 		  "mainEntity": {
 		    "@type": "ItemList",
@@ -30,20 +30,20 @@
 		      {
 		        "@type": "ListItem",
 		        "position": 1,
-		        "name": "Submódulos Personalizados en SIU-Guaraní & Procesamiento Masivo de Ingresantes",
-		        "description": "Desarrollo de módulos nativos sobre SIU-Toba/Guaraní, gestión de excepciones masivas por CSV y motor de simulación de inscripción (dry-run)."
+		        "name": "Migración y Modernización de Sistema Académico Legacy",
+		        "description": "Análisis, extracción, staging, transformación y migración incremental de plataforma histórica preservando reglas de negocio."
 		      },
 		      {
 		        "@type": "ListItem",
 		        "position": 2,
-		        "name": "Plataforma Middleware de Gestión Integrada (SIU-Guaraní / Campus Virtual / APIs Externas)",
-		        "description": "Hub de integración multisistema vía Web Services SOAP/REST y vistas materializadas en PostgreSQL para alta concurrencia."
+		        "name": "Submódulos Personalizados en SIU-Guaraní / Toba y Procesamiento Masivo",
+		        "description": "Desarrollo de módulos nativos sobre SIU-Toba/Guaraní, gestión de excepciones por CSV y simulación previa de inscripciones (dry-run)."
 		      },
 		      {
 		        "@type": "ListItem",
 		        "position": 3,
-		        "name": "Sistema de Trazabilidad de Fallas, Analítica Operativa e Integración con ERP Central",
-		        "description": "Plataforma de gestión de incidencias, dashboards estadísticos en SQL Server (MSSQL) y motor de integración atómica con ERP."
+		        "name": "Plataforma Middleware (SIU-Guaraní / Campus Virtual / APIs)",
+		        "description": "Hub de integración multisistema vía Web Services SOAP/REST y vistas materializadas para alta concurrencia."
 		      }
 		    ]
 		  }
@@ -79,27 +79,34 @@
 				text-transform: uppercase;
 				margin-bottom: 0.8em;
 			}
-			.metrics-grid {
+			.case-grid {
 				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-				gap: 1.5em;
-				margin: 2.5em 0;
+				grid-template-columns: 1fr 1fr;
+				gap: 1.2em;
+				margin-top: 1em;
 			}
-			.metric-box {
+			@media screen and (max-width: 736px) {
+				.case-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+			.case-grid-box {
 				background: rgba(0, 0, 0, 0.2);
-				border-left: 4px solid #fff;
-				padding: 1.2em 1.5em;
-				border-radius: 0 6px 6px 0;
+				padding: 1em 1.2em;
+				border-radius: 6px;
+				border-left: 3px solid rgba(255,255,255,0.3);
 			}
-			.metric-box .number {
-				font-size: 2.2em;
-				font-weight: 700;
-				line-height: 1.1;
-				display: block;
+			.case-grid-box h4 {
+				margin-bottom: 0.4em;
+				font-size: 0.95em;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				opacity: 0.9;
 			}
-			.metric-box .label {
-				font-size: 0.85em;
-				opacity: 0.8;
+			.case-grid-box p {
+				font-size: 0.9em;
+				margin: 0;
+				line-height: 1.5;
 			}
 		</style>
 	</head>
@@ -107,14 +114,15 @@
 
 		<!-- Header -->
 			<header id="header">
-				<a href="index.html" class="title">Itera-lab</a>
+				<a href="index.html" class="title">IteraLab</a>
 				<nav>
 					<ul>
 						<li><a href="index.html#intro">Inicio</a></li>
-						<li><a href="index.html#one">Objetivos</a></li>
-						<li><a href="index.html#two">Qué hacemos</a></li>
+						<li><a href="index.html#legacy">Legacy</a></li>
+						<li><a href="index.html#services">Servicios</a></li>
+						<li><a href="index.html#metodologia">Metodología</a></li>
 						<li><a href="casos.html" class="active">Casos de Éxito</a></li>
-						<li><a href="index.html#three">Contacto</a></li>
+						<li><a href="index.html#contacto">Contacto</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -125,97 +133,110 @@
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<!-- H1 Único enfocado en Casos de Éxito -->
-							<h1 style="font-size: 2.3em; text-align: center; margin-bottom: 0.3em;">Casos de Éxito & Soluciones Aplicadas</h1>
-							<h2 style="text-align:center; font-style:italic; opacity:0.85; max-width: 900px; margin: 0 auto 2em auto; font-weight: 300; line-height: 1.5; font-size: 1.15em;">
-								Demostramos el impacto de nuestras soluciones tecnológicas a través de proyectos reales de modernización, integración y analítica de datos.
+							<h1 style="font-size: 2.3em; text-align: center; margin-bottom: 0.3em;">Casos de Éxito y Experiencia de Campo</h1>
+							<h2 style="text-align:center; opacity:0.85; max-width: 900px; margin: 0 auto 2em auto; font-weight: 300; line-height: 1.5; font-size: 1.15em;">
+								Demostramos la capacidad de intervención en sistemas complejos mediante casos reales estructurados por Situación, Problema, Intervención y Resultado.
 							</h2>
 							
-							<hr />
-
-							<!-- Metricas / Impacto -->
-							<div class="metrics-grid">
-								<div class="metric-box">
-									<span class="number">+100k</span>
-									<span class="label">Registros & Operaciones procesadas en auditorías y migraciones críticas</span>
-								</div>
-								<div class="metric-box">
-									<span class="number">99.9%</span>
-									<span class="label">Disponibilidad en canalización de datos e integraciones de backend</span>
-								</div>
-								<div class="metric-box">
-									<span class="number">-40%</span>
-									<span class="label">Reducción de consumo de recursos y deuda técnica mediante Green IT</span>
-								</div>
-							</div>
-
 							<hr class="major" />
 
-							<!-- Section: Pilares y Casos de Trabajo -->
-							<h2 class="major">Proyectos Destacados por Pilar Tecnológico</h2>
-
-							<!-- Pilar 1 + Caso: Modernización, Personalizaciones Toba / SIU Guaraní y DB -->
-							<div style="clear: both;">
-								<h2>1. Modernización, Personalizaciones Específicas & Migración Compleja</h2>
-								<span class="image left"><img src="images/pic02.jpg" alt="Modernización de Sistemas y Personalización SIU Guaraní" /></span>
-								<p>Transformamos plataformas obsoletas y monolíticas en soluciones ágiles, escalables e interoperables. Aplicamos un enfoque de <strong>modernización progresiva por módulos</strong> (reemplazo gradual sin interrumpir el servicio operativo ni arriesgar la continuidad del negocio).</p>
-								<p>Somos especialistas en el desarrollo de <strong>personalizaciones avanzadas sobre frameworks de gestión académica como SIU-Toba y SIU-Guaraní</strong>, ingeniería de bases de datos PostgreSQL, desarrollo de microservicios, refactorización y saneamiento masivo de datos para transiciones transparentes y seguras.</p>
+							<!-- Caso 1: Migración de Sistema Legacy -->
+							<div class="case-card">
+								<span class="case-tag">Caso 01: Modernización y Migración Legacy</span>
+								<h3>Migración e Integración de Sistema Académico / Institucional Legacy</h3>
 								
-								<div class="case-card" style="clear: both;">
-									<span class="case-tag">Caso Aplicado: Personalización Toba, Módulos a Medida & Migración Masiva</span>
-									<h3>Submódulos Personalizados en SIU-Guaraní & Procesamiento Masivo de Ingresantes</h3>
-									<p><strong>Desafío:</strong> Adaptar el sistema académico estándar a reglas institucionales complejas, permitiendo la asignación y configuración de materias iniciales por propuesta/plan, gestión de excepciones por lote (CSV) e inscripción masiva automatizada sin afectar la trazabilidad ni romper la estructura del núcleo.</p>
-									<p><strong>Solución:</strong></p>
-									<ul>
-										<li>Desarrollo de módulos de personalización nativos sobre <strong>SIU-Toba / Guaraní</strong> (operaciones CI, controladores de negocio y capas de auditoría de usuario en tiempo real).</li>
-										<li>Diseño de motor de inscripción masiva y simulación previo a la escritura (<em>dry-run</em>) para previsualizar vacantes y cupos.</li>
-										<li>Desarrollo de scripts de diagnóstico SQL/Python para auditorías masivas de actas, corrección de historias académicas y generación de reportes normativos (Araucano).</li>
-									</ul>
+								<div class="case-grid">
+									<div class="case-grid-box">
+										<h4>Situación</h4>
+										<p>Sistema histórico con base de datos y procesos propietarios que acumularon años de reglas operativas no documentadas de manera formal.</p>
+									</div>
+									<div class="case-grid-box">
+										<h4>Problema</h4>
+										<p>Necesidad de migrar a una plataforma moderna garantizando la trazabilidad histórica y preservando reglas de negocio complejas sin interrumpir la operación.</p>
+									</div>
+									<div class="case-grid-box">
+										<h4>Intervención</h4>
+										<p>Análisis estático de consultas, extracción de esquema relacional, área de staging para limpieza, transformación de datos, scripts de validación y migración incremental por módulos.</p>
+									</div>
+									<div class="case-grid-box">
+										<h4>Resultado</h4>
+										<p>Migración controlada sin pérdida de registros, validación del 100% de la información histórica e integración transparente con el nuevo entorno.</p>
+									</div>
 								</div>
 							</div>
 
-							<hr class="major" style="clear: both;" />
-
-							<!-- Pilar 2 + Caso: Integración de Servicios (SOAP / REST / DBs) -->
-							<div style="clear: both;">
-								<h2>2. Middleware de Integración, APIs (REST / SOAP) & Interoperabilidad de Sistemas</h2>
-								<span class="image left"><img src="images/pic01.jpg" alt="Integración Middleware REST y SOAP" /></span>
-								<p>Diseñamos e implementamos <strong>plataformas middleware y Web Services de integración</strong> capaces de conectar bases de datos institucionales con APIs externas, plataformas de aprendizaje y sistemas de gestión de terceros.</p>
-								<p>Orquestamos protocolos heterogéneos (servicios <strong>SOAP</strong> para integración de aulas virtuales, endpoints <strong>REST</strong> de alto rendimiento para APIs externas y cifrado de datos), optimizando las consultas mediante vistas materializadas e interfaces AJAX asíncronas bajo principios de <strong>Green IT</strong>.</p>
+							<!-- Caso 2: Personalizaciones SIU-Guaraní / Toba -->
+							<div class="case-card">
+								<span class="case-tag">Caso 02: Personalizaciones SIU-Guaraní y Toba</span>
+								<h3>Submódulos Personalizados y Procesamiento Masivo de Ingresantes</h3>
 								
-								<div class="case-card" style="clear: both;">
-									<span class="case-tag">Caso Aplicado: Integración Multisistema & Web Services Hub</span>
-									<h3>Plataforma Middleware de Gestión Integrada (SIU-Guaraní / Campus Virtual / APIs Externas)</h3>
-									<p><strong>Desafío:</strong> Conectar el sistema central de gestión académica con campus virtuales y plataformas externas de facturación/cobros, eliminando la carga manual de datos, sincronizando comisiones/aulas y garantizando respuestas inmediatas ante consultas concurrentes.</p>
-									<p><strong>Solución:</strong></p>
-									<ul>
-										<li>Desarrollo de un <strong>Hub de Integración y Web Service (PHP MVC + PostgreSQL)</strong> que gestiona la interoperabilidad bidireccional entre bases de datos del core y servicios externos.</li>
-										<li>Implementación de <strong>conectores SOAP</strong> para la sincronización y provisión automática de comisiones y aulas en plataformas de aprendizaje.</li>
-										<li>Exposición de APIs REST seguras para consulta en tiempo real de fichas de alumnos, preinscripciones y estados de cumplimiento, utilizando vistas materializadas concurrentes para alto tráfico.</li>
-										<li>Automatización de procesos en segundo plano (Python / Cron / Tareas programadas) para reconciliación de datos y sincronizaciones nocturnas sin degradación del servicio.</li>
-									</ul>
+								<div class="case-grid">
+									<div class="case-grid-box">
+										<h4>Situación</h4>
+										<p>Gestión académica universitaria sobre SIU-Guaraní con requerimientos normativos específicos de la institución que excedían las operaciones estándar.</p>
+									</div>
+									<div class="case-grid-box">
+										<h4>Problema</h4>
+										<p>Necesidad de procesar inscripciones y asignaciones iniciales masivas por lote con reglas institucionales a medida sin alterar el core ni perder la capacidad de actualizar el framework.</p>
+									</div>
+									<div class="case-grid-box">
+										<h4>Intervención</h4>
+										<p>Desarrollo de submódulos nativos sobre SIU-Toba/Guaraní (controladores CI, reglas de negocio), simulación previa (dry-run) y capas de auditoría de usuario en tiempo real.</p>
+									</div>
+									<div class="case-grid-box">
+										<h4>Resultado</h4>
+										<p>Automatización del circuito de inscripciones por lote (archivos CSV), reducción de tiempos administrativos y conformidad con auditorías normativas e institucionales (Araucano).</p>
+									</div>
 								</div>
 							</div>
 
-							<hr class="major" style="clear: both;" />
-
-							<!-- Pilar 3 + Caso: Análisis de Datos, Dashboards & ERP Integration -->
-							<div style="clear: both;">
-								<h2>3. Análisis de Datos, Dashboards Estadísticos & Trazabilidad de Inventario</h2>
-								<span class="image left"><img src="images/pic03.jpg" alt="Análisis de Datos y Dashboards en SQL Server" /></span>
-								<p>Convertimos volúmenes de datos operativos en decisiones estratégicas. Construimos pipelines de datos robustos, automatizaciones de auditoría y <strong>dashboards estadísticos interactivos conectando bases de datos relacionales empresariales (SQL Server MSSQL / PostgreSQL)</strong> para monitorear indicadores clave en tiempo real.</p>
-								<p>Diseñamos mecanismos de integración asíncrona entre sistemas web corporativos y ERPs centrales asegurando la trazabilidad operativa y contable de extremo a extremo.</p>
+							<!-- Caso 3: Middleware e Integración -->
+							<div class="case-card">
+								<span class="case-tag">Caso 03: Integración y Middleware</span>
+								<h3>Plataforma Middleware de Gestión Integrada (Core / Campus / APIs)</h3>
 								
-								<div class="case-card" style="clear: both;">
-									<span class="case-tag">Caso Aplicado: Control de Incidencias, Dashboards MSSQL & Integración ERP</span>
-									<h3>Sistema de Trazabilidad de Fallas, Analítica Operativa e Integración con ERP Central</h3>
-									<p><strong>Desafío:</strong> Unificar el circuito de control de incidencias y devoluciones distribuidas en múltiples centros logísticos y nodos operativos, integrando las transacciones en tiempo real con el ERP central y proveyendo visibilidad ejecutiva.</p>
-									<p><strong>Solución:</strong></p>
-									<ul>
-										<li>Desarrollo de una <strong>plataforma web de gestión de incidencias y movimientos</strong> con control de stock por depósito (recepciones, traslados entre nodos, cambios y bajas/descarte).</li>
-										<li>Diseño de <strong>dashboards analíticos e indicadores estadísticos en SQL Server (MSSQL)</strong> para el monitoreo en tiempo real de motivos de falla, volúmenes procesados y rendimiento logístico.</li>
-										<li>Implementación de un <strong>motor de sincronización automática e integración atómica con el ERP central</strong>, generando ajustes de inventario y transferencias contables en tiempo real sin duplicación.</li>
-									</ul>
+								<div class="case-grid">
+									<div class="case-grid-box">
+										<h4>Situación</h4>
+										<p>Coexistencia de múltiples plataformas (sistema académico central, aulas virtuales Moodle y APIs externas de facturación/cobro).</p>
+									</div>
+									<div class="case-grid-box">
+										<h4>Problema</h4>
+										<p>Falta de sincronización en tiempo real, duplicación de carga manual e inconsistencias entre los datos de alumnos, comisiones y cobranzas.</p>
+									</div>
+									<div class="case-grid-box">
+										<h4>Intervención</h4>
+										<p>Diseño de un Middleware Hub (PHP MVC + PostgreSQL) con conectores SOAP para aulas virtuales, endpoints REST seguros y vistas materializadas para consultas concurrentes de alto tráfico.</p>
+									</div>
+									<div class="case-grid-box">
+										<h4>Resultado</h4>
+										<p>Sincronización automatizada bidireccional, eliminación de tareas manuales redundantes y respuestas de alta velocidad sin sobrecargar la base de datos central.</p>
+									</div>
+								</div>
+							</div>
+
+							<!-- Caso 4: Analítica y ERP -->
+							<div class="case-card">
+								<span class="case-tag">Caso 04: Analítica e Integración ERP</span>
+								<h3>Control de Incidencias, Dashboards MSSQL y Trazabilidad ERP</h3>
+								
+								<div class="case-grid">
+									<div class="case-grid-box">
+										<h4>Situación</h4>
+										<p>Operación distribuida en múltiples nodos que requería seguimiento estricto de incidencias, movimientos de stock y devoluciones.</p>
+									</div>
+									<div class="case-grid-box">
+										<h4>Problema</h4>
+										<p>Desconexión entre los registros operativos de campo y la contabilidad central en el ERP, generando demoras en la visibilidad directiva.</p>
+									</div>
+									<div class="case-grid-box">
+										<h4>Intervención</h4>
+										<p>Desarrollo de plataforma de trazabilidad, tableros analíticos en SQL Server (MSSQL) y motor de integración atómica asíncrona con el ERP empresarial.</p>
+									</div>
+									<div class="case-grid-box">
+										<h4>Resultado</h4>
+										<p>Visibilidad ejecutiva en tiempo real de motivos de falla y rendimiento logístico, con ajustes de inventario automáticos y libres de duplicación.</p>
+									</div>
 								</div>
 							</div>
 
@@ -227,7 +248,7 @@
 			<footer id="footer" class="wrapper alt">
 				<div class="inner">
 					<ul class="menu">
-						<li>&copy; Itera-lab. Derechos reservados.</li>
+						<li>&copy; IteraLab. Todos los derechos reservados.</li>
 					</ul>
 				</div>
 			</footer>
